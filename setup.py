@@ -9,8 +9,9 @@ except Exception:
     long_description = ''
 setup(
     name="hashtagAI",
-    version="0.2.1.1",
-    packages=find_packages(),
+    version="0.2.1.7",
+    packages=find_packages(where="."),
+    py_modules=["hashtagai", "__init__"],
     author="Thanabordee N. (Noun)",
     author_email="thanabordee.noun@gmail.com",
     install_requires=[  

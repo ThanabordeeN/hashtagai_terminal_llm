@@ -1,6 +1,7 @@
+
 # hashtagAI
 
-hashtagAI is a command-line tool that generates terminal command responses using Various providers's language model.
+hashtagAI is a command-line tool that generates terminal command responses using various providers' language models.
 
 ## Installation
 
@@ -12,11 +13,11 @@ pip install hashtagAI
 
 ## Usage
 
-After installation, you can use the [`ask`](command:_github.copilot.openRelativePath?%5B%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2Fvar%2Fdata%2Fpython%2Fbin%2Fask%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%2264dbf808-7a30-42cd-9b30-cfc2c438b28a%22%5D "/var/data/python/bin/ask") command to generate terminal command responses. The [`ask`](command:_github.copilot.openRelativePath?%5B%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2Fvar%2Fdata%2Fpython%2Fbin%2Fask%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%2264dbf808-7a30-42cd-9b30-cfc2c438b28a%22%5D "/var/data/python/bin/ask") command takes a terminal command as input and provides a concise explanation and the exact terminal command to accomplish the task.
+After installation, you can use the `ask` command to generate terminal command responses. The `ask` command takes a terminal command as input and provides a concise explanation and the exact terminal command to accomplish the task.
 
 ### Example
 
-```sh
+```shell
 ask How do I update all packages on Fedora?
 ```
 
@@ -31,6 +32,22 @@ Command:
 sudo dnf update
 ```
 
+## Configuration
+
+Ensure you have set the required environment variables:
+
+- `PROVIDER_API_KEY`: Your Model API key.
+- `BASE_URL`: The base URL for the Providers API (optional, default: `https://api.together.xyz/v1`).
+- `MODEL_ID`: The ID of the Model to use (optional, default: `google/gemma-2-9b-it`).
+
+### Example
+
+```sh
+export PROVIDER_API_KEY='YOUR_API_KEY'
+export BASE_URL='https://api.together.xyz/v1'
+export MODEL_ID='meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo'
+```
+
 ## Development
 
 To contribute to this project, follow these steps:
@@ -39,7 +56,11 @@ To contribute to this project, follow these steps:
 2. Install the dependencies:
 
 ```sh
-pip install -r requirements.txt
+pip install -r 
+
+requirements.txt
+
+
 ```
 
 3. Make your changes and submit a pull request.
@@ -51,3 +72,6 @@ This project is licensed under the MIT License.
 ## Author
 
 Thanabordee N. (Noun)
+```
+
+Feel free to modify the content as needed.
