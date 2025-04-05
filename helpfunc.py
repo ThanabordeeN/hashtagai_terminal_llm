@@ -44,7 +44,7 @@ def display_results(explanation: str, code: str) -> None:
         typewriter_print(colorize(code, MAGENTA))
         print(colorize("─" * 50, BLUE) + "\n")
     else:
-        print("\n" + colorize("ℹ️ No command needed for this request.", YELLOW) + "\n")
+        print("\n" + colorize("ℹ️  No command needed for this request.", YELLOW) + "\n")
 
 def typewriter_print(text: str, delay: float = 0.001) -> None:
     """Display text with a typewriter effect."""

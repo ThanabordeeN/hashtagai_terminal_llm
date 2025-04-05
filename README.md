@@ -1,7 +1,15 @@
-
 # hashtagAI
 
-hashtagAI is a command-line tool that generates terminal command responses using various providers' language models.
+hashtagAI is a command-line tool that generates terminal command responses using various providers' language models. It helps users find and execute the right terminal commands by providing clear explanations and ready-to-use commands.
+
+## Features
+
+- **AI-powered command generation**: Get terminal commands from natural language descriptions
+- **Multi-provider support**: Works with different LLM providers
+- **Interactive mode**: Ask follow-up questions and maintain conversation context
+- **Command execution**: Run suggested commands directly from the interface
+- **Command history**: View and recall previous commands and explanations
+- **Cross-platform support**: Works on Linux, macOS, and Windows
 
 ## Installation
 
@@ -13,16 +21,16 @@ pip install hashtagAI
 
 ## Usage
 
-After installation, you can use the `ask` command to generate terminal command responses. The `ask` command takes a terminal command as input and provides a concise explanation and the exact terminal command to accomplish the task.
+After installation, you can use the `ask` command to generate terminal command responses. The `ask` command takes a natural language description as input and provides a concise explanation and the exact terminal command to accomplish the task.
 
-### Example
+### Examples
 
+**Basic usage:**
 ```shell
 ask How do I update all packages on Fedora?
 ```
 
-### Output
-
+**Output:**
 ```
 #AI Assistant:
 Explanation:
@@ -32,38 +40,65 @@ Command:
 sudo dnf update
 ```
 
+**More examples:**
+```shell
+ask How do I find large files in my home directory?
+ask How can I check CPU temperature on Ubuntu?
+ask Create a backup of my Documents folder with date in filename
+```
+
+### Interactive Mode
+
+Launch hashtagAI in interactive mode by running:
+
+```shell
+hashtagai
+```
+
+This will start a conversation where you can ask multiple questions and maintain context.
+
 ## Configuration
 
 Ensure you have set the required environment variables:
 
-- `PROVIDER_API_KEY`: Your Model API key.
-- `BASE_URL`: The base URL for the Providers API (optional, default: `https://api.together.xyz/v1`).
-- `MODEL_ID`: The ID of the Model to use (optional, default: `google/gemma-2-9b-it`).
+- `PROVIDER_API_KEY`: Your API key for the LLM provider
+- `LITELLM_MODEL_ID`: The ID of the model to use (optional, default: `gemini/gemini-2.0-flash`)
+- `HASHTAGAI_TYPING_SPEED`: Controls the typing animation speed (optional, default: `0.001`)
+- `HASHTAGAI_MAX_HISTORY`: Maximum number of interactions to keep in history (optional, default: `10`)
 
-### Example
+### Example Configuration
 
 ```sh
+# Required
 export PROVIDER_API_KEY='YOUR_API_KEY'
-export BASE_URL='https://api.together.xyz/v1'
-export MODEL_ID='meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo'
+
+# Optional configurations
+export LITELLM_MODEL_ID='meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo'
+export HASHTAGAI_TYPING_SPEED='0.002'
+export HASHTAGAI_MAX_HISTORY='15'
 ```
 
 ## Development
 
 To contribute to this project, follow these steps:
 
-1. Clone the repository.
-2. Install the dependencies:
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/hashtagai_terminal_llm.git
+   cd hashtagai_terminal_llm
+   ```
 
-```sh
-pip install -r 
+2. Install development dependencies:
+   ```sh
+   pip install -r requirements-dev.txt
+   ```
 
-requirements.txt
+3. Make your changes and test them locally:
+   ```sh
+   python -m hashtagai
+   ```
 
-
-```
-
-3. Make your changes and submit a pull request.
+4. Submit a pull request with your changes.
 
 ## License
 
@@ -72,6 +107,3 @@ This project is licensed under the MIT License.
 ## Author
 
 Thanabordee N. (Noun)
-```
-
-Feel free to modify the content as needed.

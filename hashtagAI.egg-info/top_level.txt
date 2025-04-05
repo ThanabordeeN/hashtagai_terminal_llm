@@ -1,4 +1,11 @@
 __init__
 agent
+cli_parser
+command_processor
+config
 hashtagai
 helpfunc
+history_manager
+interactive_mode
+model_init
+system_info

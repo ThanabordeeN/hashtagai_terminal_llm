@@ -1,15 +1,24 @@
-Metadata-Version: 2.2
+Metadata-Version: 2.4
 Name: hashtagAI
-Version: 0.2.1.7
+Version: 0.3.0
 Author: Thanabordee N. (Noun)
 Author-email: thanabordee.noun@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
 Description-Content-Type: text/markdown
-Requires-Dist: openai
+Requires-Dist: dspy
+Requires-Dist: distro
+Requires-Dist: importlib-metadata
 Dynamic: author
 Dynamic: author-email
+Dynamic: classifier
 Dynamic: description
 Dynamic: description-content-type
 Dynamic: requires-dist
+Dynamic: requires-python
 
 
 # hashtagAI

@@ -13,7 +13,11 @@ setup(
     name="hashtagAI",
     version="0.3.0",  # Version bump for significant UI improvements
     packages=find_packages(where="."),
-    py_modules=["hashtagai", "__init__", "helpfunc", "agent"],
+    py_modules=["hashtagai", "__init__", 
+                "helpfunc", "agent" , "cli_parser", 
+                "command_processor", "history_manager", 
+                "system_info", "model_init", "config", 
+                "interactive_mode"],
     author="Thanabordee N. (Noun)",
     author_email="thanabordee.noun@gmail.com",
     install_requires=[  

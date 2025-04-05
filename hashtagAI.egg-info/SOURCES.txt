@@ -1,9 +1,16 @@
 README.md
 __init__.py
 agent.py
+cli_parser.py
+command_processor.py
+config.py
 hashtagai.py
 helpfunc.py
+history_manager.py
+interactive_mode.py
+model_init.py
 setup.py
+system_info.py
 hashtagAI.egg-info/PKG-INFO
 hashtagAI.egg-info/SOURCES.txt
 hashtagAI.egg-info/dependency_links.txt
