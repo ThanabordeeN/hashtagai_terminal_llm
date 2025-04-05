@@ -84,7 +84,7 @@ To contribute to this project, follow these steps:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/hashtagai_terminal_llm.git
+   git clone https://github.com/thanabordeen/hashtagai_terminal_llm.git
    cd hashtagai_terminal_llm
    ```
 
