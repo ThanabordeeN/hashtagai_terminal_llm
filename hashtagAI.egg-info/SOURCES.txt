@@ -1,0 +1,12 @@
+README.md
+__init__.py
+agent.py
+hashtagai.py
+helpfunc.py
+setup.py
+hashtagAI.egg-info/PKG-INFO
+hashtagAI.egg-info/SOURCES.txt
+hashtagAI.egg-info/dependency_links.txt
+hashtagAI.egg-info/entry_points.txt
+hashtagAI.egg-info/requires.txt
+hashtagAI.egg-info/top_level.txt

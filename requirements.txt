@@ -1,1 +1,3 @@
-openai
+dspy
+distro
+importlib-metadata
