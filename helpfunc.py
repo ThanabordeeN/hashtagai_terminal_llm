@@ -40,9 +40,7 @@ def display_results(explanation: str, code: str) -> None:
 
     if code and code.lower() != "none":
         print("\n" + colorize("💻 Command:", BOLD + BLUE))
-        print(colorize("─" * 50, BLUE))
         typewriter_print(colorize(code, MAGENTA))
-        print(colorize("─" * 50, BLUE) + "\n")
     else:
         print("\n" + colorize("ℹ️  No command needed for this request.", YELLOW) + "\n")
 
@@ -64,13 +62,7 @@ def ask_yes_no(question: str) -> bool:
 
 def execute_command(command: str) -> tuple:
     """Execute a terminal command and return the output and success flag.
-    
-    Returns:
-        tuple: (output, status_code) where status_code is:
-            1 - Success with expected result
-            0 - Error in execution
-            2 - No command to execute
-            3 - Success but potentially unexpected result
+
     """
     if not command or command.lower() == "none":
         print(colorize("No valid command to execute.", YELLOW))
@@ -116,16 +108,4 @@ def clear_screen() -> None:
     """Clear the terminal screen."""
     os.system('cls' if platform.system() == 'Windows' else 'clear')
 
-def display_welcome_banner() -> None:
-    """Display a welcome banner for HashtagAI Terminal."""
-    clear_screen()
-    print_divider("═", CYAN)
-    print(colorize("""
-    ╦ ╦┌─┐┌─┐┬ ┬┌┬┐┌─┐┌─┐┌─┐┬  ╔═╗╦  
-    ╠═╣├─┤└─┐├─┤ │ ├─┤│ ┬├─┤│  ╠═╣║  
-    ╩ ╩┴ ┴└─┘┴ ┴ ┴ ┴┴ ┴┴─┘╩ ╩╩  
-    """, GREEN + BOLD))
-    print(colorize("    AI-powered terminal assistant", YELLOW))
-    print_divider("═", CYAN)
-    print("")
 

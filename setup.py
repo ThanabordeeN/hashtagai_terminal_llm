@@ -11,7 +11,7 @@ except Exception:
 
 setup(
     name="hashtagAI",
-    version="0.3.0",  # Version bump for significant UI improvements
+    version="0.3.1",  # Version bump for significant UI improvements
     packages=find_packages(where="."),
     py_modules=["hashtagai", "__init__", 
                 "helpfunc", "agent" , "cli_parser", 

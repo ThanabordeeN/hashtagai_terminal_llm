@@ -15,7 +15,7 @@ def initialize_model():
         exit(1)
     
     try:
-        print(colorize(f"Initializing language model: {CONFIG['model']}", CYAN))
+        # print(colorize(f"Initializing language model: {CONFIG['model']}", CYAN))
         lm = dspy.LM(CONFIG["model"], api_key=CONFIG["api_key"])
         dspy.configure(lm=lm)
         return True
